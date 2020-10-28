@@ -3,6 +3,9 @@ Web app that handles an in-person game of "Among Us"
 
 [Requirements in JIRA](https://jared-tanner.atlassian.net/secure/RapidBoard.jspa?rapidView=2&view=planning.nodetail&selectedIssue=AUI-20&epics=visible&issueLimit=100)
 
+[link for image assets](https://www.spriters-resource.com/pc_computer/amongus/sheet/139872/)
+
+Adobe XD design is stored via Adobe creative cloud tied to Deraj21@gmail.com
 
 ---
 ## Data Model
@@ -33,13 +36,14 @@ Web app that handles an in-person game of "Among Us"
 - [x] get requirements into jira
   - [x] work out MVP and subsequent sprints
 - [x] plan out basic data model (to come back to later)
-- [ ] design app in Adobe XD (leave room for possible features)
-  - [ ] landing page
-  - [ ] Host pages
-  - [ ] player pages
+- [x] design app in Adobe XD (leave room for possible features)
+  - [x] landing page
+  - [x] Host pages
+  - [x] player pages
 - [ ] Based on the design, decide what React features to use (redux, hooks, router etc...)
+- [ ] research how to have apps talk to each other (host to players, players to host)
 - [x] create-react-app for front end
-  - [ ] get file structure up
+  - [x] get file structure up
 - [ ] create landing page (choose host or player)
 - [ ] create host pages
   - [ ] main page (before game starts)
