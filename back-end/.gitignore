@@ -1,2 +1,5 @@
-# stuffs
+# Node Modules
+/node_modules
+
+# local data
 .env

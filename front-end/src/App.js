@@ -1,7 +1,22 @@
 import { Component } from 'react';
+// import { Ably } from 'ably';
+
 import './App.css';
 import PageOne from './components/PageOne';
 import PageTwo from './components/PageTwo';
+
+// env
+const API_KEY = ''
+
+
+// Ably
+const Ably = require('ably');
+let realtime = new Ably.Realtime(API_KEY);
+
+// channel.subscribe(function(message) {
+//   console.log("Received: ",  message.data);
+// });
+
 
 class App extends Component {
   constructor() {
@@ -12,12 +27,25 @@ class App extends Component {
       colorId: 0
     }
 
+    
     this.updateColorId = this.updateColorId.bind(this)
+    this.publishColor = this.publishColor.bind(this)
     this.updatePage = this.updatePage.bind(this)
+    
+    // setup channel
+    this.channel = realtime.channels.get('box-color');
+    this.channel.subscribe(this.updateColorId);
   }
 
-  updateColorId(id){
-    this.setState({ ...this.state, colorId: id })
+  updateColorId(msg){
+    // brom ably
+    console.log("recieved: ", msg.data);
+
+    this.setState({ ...this.state, colorId: parseInt(msg.data) })
+  }
+
+  publishColor(id){
+    this.channel.publish("color", id+"");
   }
 
   updatePage(page){
@@ -27,8 +55,6 @@ class App extends Component {
   render() {
     let { currentPage, colorId } = this.state
 
-    console.log(currentPage)
-
     return (
       <div className="App">
         {
@@ -36,7 +62,7 @@ class App extends Component {
         ?
         <PageOne updatePage={this.updatePage} />
         :
-        <PageTwo updatePage={this.updatePage} updateColorId={this.updateColorId} colorId={colorId} />
+        <PageTwo updatePage={this.updatePage} updateColorId={this.publishColor} colorId={colorId} />
         }
       </div>
     );
