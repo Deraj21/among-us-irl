@@ -2,8 +2,35 @@
 @import 'base'
 
 
-.box
-  width: 100px
-  height: 100px
+
+button
+  background-color: white
   border: 1px solid black
-  border-radius: 5px
+  cursor: pointer
+
+.lobby-btn
+  background-color: rgba(0, 0, 0, 0)
+  color: white
+  padding: 0px 10px
+  margin: 0px 10px
+
+  border: 7px solid white
+  border-radius: 12px
+
+  p
+    font-family: Caveat
+    font-size: 45px
+    line-height: 40px
+    letter-spacing: 1px
+    background-color: rgba(0, 0, 0, 0)
+  &:hover
+    transform: rotate(-2deg)
+
+    p
+      text-shadow: 0px 0px 2px white, 0px 0px 5px white, 0px 0px 10px white, 0px 0px 20px white
+
+
+.App
+
+
+@import 'LandingPage'

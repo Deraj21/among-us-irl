@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Syne+Mono&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -51,6 +52,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+div, button, h1, h2, h3, h4, p {
+  box-sizing: border-box;
+}
+
 h1, h2, h3, h4 {
   font-weight: bold;
 }
@@ -80,11 +85,51 @@ p {
   font-size: 16px;
 }
 
-.box {
-  width: 100px;
-  height: 100px;
+button {
+  background-color: white;
   border: 1px solid black;
-  border-radius: 5px;
+  cursor: pointer;
+}
+
+.lobby-btn {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  padding: 0px 10px;
+  margin: 0px 10px;
+  border: 7px solid white;
+  border-radius: 12px;
+}
+.lobby-btn p {
+  font-family: Caveat;
+  font-size: 45px;
+  line-height: 40px;
+  letter-spacing: 1px;
+  background-color: rgba(0, 0, 0, 0);
+}
+.lobby-btn:hover {
+  transform: rotate(-2deg);
+}
+.lobby-btn:hover p {
+  text-shadow: 0px 0px 2px white, 0px 0px 5px white, 0px 0px 10px white, 0px 0px 20px white;
+}
+
+.LandingPage {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-size: contain;
+  background-repeat: repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.LandingPage .innerPage {
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid red;
+}
+.LandingPage .innerPage .btn-box {
+  display: flex;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=App.css.map */
