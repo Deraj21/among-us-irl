@@ -17,10 +17,10 @@ Adobe XD design is stored via Adobe creative cloud tied to Deraj21@gmail.com
 ## Routes
 - /landingPage - LangingPage
 - /lobby - Lobby
-  - .../player - PlayerLobby
   - .../host - HostLobby
-    - .../settings - LobbySettings
-    - .../tasks - HostTasks
+  - .../host/settings - LobbySettings
+  - .../host/tasks - HostTasks
+  - .../player - PlayerLobby
 - /game - GamePage
   - .../player - PlayerTasks
   - .../host - EmergencyButton

@@ -1,10 +1,12 @@
 import { Component } from 'react';
+import { Switch, Route, Link } from 'react-router-dom'
 
-import GoArrow from './Elements/GoArrow'
-
-import amongUsCouch from '../assets/among-us-irl.jpg' // '../assets/among-us-space-background.jpg'
+// components
+import LandingButtons from './LandingButtons'
+import PlayerJoin from './PlayerJoin'
+// assets
+import amongUsCouch from '../assets/among-us-irl.jpg'
 import starsSmall from '../assets/stars-small.jpg'
-import cancel from '../assets/back.png'
 
 class LandingPage extends Component {
   constructor() {
@@ -12,10 +14,11 @@ class LandingPage extends Component {
 
     this.state = {
       nickname: '',
-      code: '',
-      joining: false
+      code: ''
     }
 
+    this.updateNickname = this.updateNickname.bind(this)
+    this.updateCode = this.updateCode.bind(this)
   }
 
   updateNickname(e) {
@@ -26,12 +29,8 @@ class LandingPage extends Component {
     this.setState({ ...this.state, code: e.target.value })
   }
 
-  updateJoining(joining){
-    this.setState({ ...this.state, joining: joining })
-  }
-
   render() {
-    let { nickname, code, joining } = this.state
+    let { nickname, code } = this.state
 
     const landingPageStyle = {
       backgroundImage: `url(${starsSmall})`
@@ -40,25 +39,15 @@ class LandingPage extends Component {
     return (
       <div className="LandingPage" style={landingPageStyle}>
         <img className="innerImage" alt="among-us-irl" src={amongUsCouch} />
-        {
-          joining
-          ?
-          <div className="joining-box">
-            <img id="back" src={cancel} alt="back" onClick={() => this.updateJoining(false)} />
 
-            <input type="text" className="lobby-input" placeholder="nickname" value={nickname} onChange={(e) => this.updateNickname(e)} />
-
-            <div className="enter-code-box">
-              <input type="text" className="lobby-input code-input" placeholder="code" value={code} onChange={(e) => this.updateCode(e)}/>
-              <GoArrow color="white" backgroundColor="black" scale="1"/>
-            </div>
-          </div>
-          :
-          <div className="btn-box">
-            <button className="lobby-btn"><p>HOST</p></button>
-            <button className="lobby-btn" onClick={() => this.updateJoining(true)} ><p>JOIN</p></button>
-          </div>
-        }
+        <Switch>
+          <Route exact path="/landing">
+            <LandingButtons/>
+          </Route>
+          <Route path="/landing/playerJoin">
+            <PlayerJoin code={code} updateCode={this.updateCode} nickname={nickname} updateNickname={this.updateNickname}/>
+          </Route>
+        </Switch>
       </div>
     );
   }

@@ -9,16 +9,12 @@ import './App.css';
 // Ably code here?
 
 class App extends Component {
-  constructor() {
-    super()
-
-  }
 
   render() {
 
     return (
       <div className="App">
-        { routes() }
+        { routes }
       </div>
     );
   }
