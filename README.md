@@ -8,6 +8,24 @@ Web app that handles an in-person game of "Among Us"
 Adobe XD design is stored via Adobe creative cloud tied to Deraj21@gmail.com
 
 ---
+## Front-end features needed
+- react-router
+- redux for...
+  - game code?
+- 
+
+## Routes
+- /landingPage - LangingPage
+- /lobby - Lobby
+  - .../player - PlayerLobby
+  - .../host - HostLobby
+    - .../settings - LobbySettings
+    - .../tasks - HostTasks
+- /game - GamePage
+  - .../player - PlayerTasks
+  - .../host - EmergencyButton
+
+---
 ## Data Model
 ### Tasks table
 - 

@@ -1,7 +1,8 @@
 import { Component } from 'react';
 import env from './env';
 
-import LandingPage from './components/LandingPage'
+import routes from './routes'
+// import LandingPage from './components/LandingPage'
 
 import './App.css';
 
@@ -17,7 +18,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <LandingPage />
+        { routes() }
       </div>
     );
   }

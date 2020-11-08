@@ -90,6 +90,9 @@ button {
   border: 1px solid black;
   cursor: pointer;
 }
+button:focus {
+  outline: none;
+}
 
 .lobby-btn {
   background-color: rgba(0, 0, 0, 0);
@@ -113,23 +116,58 @@ button {
   text-shadow: 0px 0px 2px white, 0px 0px 5px white, 0px 0px 10px white, 0px 0px 20px white;
 }
 
+.GoArrow {
+  display: flex;
+  cursor: pointer;
+}
+.GoArrow .left, .GoArrow .right {
+  width: 0;
+  height: 0;
+}
+
 .LandingPage {
-  min-height: 100vh;
-  min-width: 100vw;
+  height: 100vh;
   background-size: contain;
   background-repeat: repeat;
-  position: relative;
   display: flex;
   justify-content: center;
 }
-.LandingPage .innerPage {
-  background-size: cover;
-  background-repeat: no-repeat;
-  border: 1px solid red;
+.LandingPage .lobby-input {
+  border: 5px double white;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  height: 25px;
+  width: 220px;
+  font-size: 20px;
+  padding: 5px;
 }
-.LandingPage .innerPage .btn-box {
+.LandingPage .code-input {
+  width: 150px;
+  margin-right: 15px;
+}
+.LandingPage .innerImage {
+  height: 100%;
+}
+.LandingPage .btn-box, .LandingPage .joining-box {
+  position: absolute;
+  top: 75%;
+}
+.LandingPage .joining-box {
+  top: 65%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.LandingPage #back {
+  height: 40px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.LandingPage .enter-code-box {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=App.css.map */
