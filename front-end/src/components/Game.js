@@ -3,14 +3,20 @@ import { Switch, Route } from 'react-router-dom'
 
 import EmergencyButton from './EmergencyButton'
 import PlayerTasks from './PlayerTasks'
+// assets
+import starsSmall from '../assets/stars-small.jpg'
 
 class Game extends Component{
 
 
   render(){
 
+    const style = {
+      backgroundImage: `url(${starsSmall})`
+    }
+
     return (
-      <div className="Game" >
+      <div className="Game page" style={style}>
         <h1>Game (taskbar here)</h1>
         <Switch>
           <Route path="/game/host" component={EmergencyButton} />

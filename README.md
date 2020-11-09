@@ -15,7 +15,9 @@ Adobe XD design is stored via Adobe creative cloud tied to Deraj21@gmail.com
 - 
 
 ## Routes
-- /landingPage - LangingPage
+- / - redirects to "/landing"
+- /landing - LangingPage, LandingButtons
+  - .../playerJoin - PlayerJoin
 - /lobby - Lobby
   - .../host - HostLobby
   - .../host/settings - LobbySettings
@@ -58,13 +60,14 @@ Adobe XD design is stored via Adobe creative cloud tied to Deraj21@gmail.com
   - [x] landing page
   - [x] Host pages
   - [x] player pages
-- [ ] Based on the design, decide what React features to use (redux, hooks, router etc...)
-- [ ] research how to have apps talk to each other (host to players, players to host)
+- [x] Based on the design, decide what React features to use (redux, hooks, router etc...)
+- [x] research how to have apps talk to each other (host to players, players to host)
 - [x] create-react-app for front end
   - [x] get file structure up
-- [ ] create landing page (choose host or player)
+- [x] create landing page (choose host or player)
 - [ ] create host pages
   - [ ] main page (before game starts)
+  - [ ] create settings page
   - [ ] task management page
   - [ ] in-game page
 - [ ] create player pages
@@ -73,13 +76,15 @@ Adobe XD design is stored via Adobe creative cloud tied to Deraj21@gmail.com
 - [ ] create database
   - [ ] tasks table
 - [ ] create back end server
-  - [ ] read
-  - [ ] write
-  - [ ] update
-  - [ ] delete
+  - [ ] CRUD for tasks
+  - [ ] request auth token for Ably
+  - [ ] randomly assign tasks & send to each player
+  - [ ] how many players are currently in game
+  - [ ] create random code, and send to clients
+  - [ ] player death endpoint
+  - [ ] emergency meeting endpoint
+  - [ ] report body endpoint
 - [ ] connect back end to front end
-- [ ] figure out how to get different instances of the app to talk to each other via the game id
-  - [ ] ...
 
 
 

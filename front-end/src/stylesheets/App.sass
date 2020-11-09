@@ -9,6 +9,11 @@ button
   &:focus
     outline: none
 
+.page
+  height: 100vh
+  background-size: contain
+  background-repeat: repeat
+
 .lobby-btn
   background-color: rgba(0, 0, 0, 0)
   color: white
@@ -30,9 +35,15 @@ button
     p
       text-shadow: 0px 0px 2px white, 0px 0px 5px white, 0px 0px 10px white, 0px 0px 20px white
 
+#back
+  height: 40px
+  cursor: pointer
 
 // Elements
 @import './Elements/GoArrow'
 
 // components
 @import 'LandingPage'
+@import 'Lobby'
+@import 'HostLobby'
+@import 'LobbySettings'

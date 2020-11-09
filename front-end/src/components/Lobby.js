@@ -5,6 +5,8 @@ import HostLobby from './HostLobby'
 import LobbySettings from './LobbySettings'
 import PlayerLobby from './PlayerLobby'
 import HostTasks from './HostTasks'
+// assets
+import starsSmall from '../assets/stars-small.jpg'
 
 class Lobby extends Component {
   constructor(props){
@@ -15,12 +17,19 @@ class Lobby extends Component {
     }
   }
 
-
   render() {
 
+    const style = {
+      backgroundImage: `url(${starsSmall})`
+    }
+
     return (
-      <div className="HostLobby">
-        <h1>Lobby CODE here</h1>
+      <div className="Lobby page" style={style}>
+        <div className="game-code-box">
+          <p>Game Code:</p>
+          <h3>QHGJFR</h3>
+        </div>
+        
         <Switch>
           <Route exact path="/lobby/host" component={HostLobby} />
           <Route path="/lobby/host/settings" component={LobbySettings} />

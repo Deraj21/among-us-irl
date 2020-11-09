@@ -50,6 +50,7 @@ table {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  color: white;
 }
 
 div, button, h1, h2, h3, h4, p {
@@ -94,6 +95,12 @@ button:focus {
   outline: none;
 }
 
+.page {
+  height: 100vh;
+  background-size: contain;
+  background-repeat: repeat;
+}
+
 .lobby-btn {
   background-color: rgba(0, 0, 0, 0);
   color: white;
@@ -116,6 +123,11 @@ button:focus {
   text-shadow: 0px 0px 2px white, 0px 0px 5px white, 0px 0px 10px white, 0px 0px 20px white;
 }
 
+#back {
+  height: 40px;
+  cursor: pointer;
+}
+
 .GoArrow {
   display: flex;
   cursor: pointer;
@@ -126,9 +138,6 @@ button:focus {
 }
 
 .LandingPage {
-  height: 100vh;
-  background-size: contain;
-  background-repeat: repeat;
   display: flex;
   justify-content: center;
 }
@@ -160,14 +169,88 @@ button:focus {
   align-items: flex-end;
 }
 .LandingPage #back {
-  height: 40px;
   margin-bottom: 10px;
-  cursor: pointer;
 }
 .LandingPage .enter-code-box {
   display: flex;
   align-items: center;
   margin-top: 20px;
+}
+
+.Lobby {
+  padding-top: 20px;
+}
+.Lobby .game-code-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.27);
+  color: white;
+  margin: 0px 20px;
+  padding: 10px;
+  font-weight: normal;
+}
+.Lobby .game-code-box p {
+  margin-right: 10px;
+}
+
+.HostLobby {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.HostLobby button, .HostLobby div {
+  margin-top: 35px;
+}
+.HostLobby .player-count {
+  display: flex;
+  align-items: center;
+}
+.HostLobby .player-count img {
+  height: 40px;
+}
+.HostLobby .player-count p {
+  color: #0dc700;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+.HostLobby .start-btn {
+  cursor: pointer;
+  margin-top: 80px;
+}
+.HostLobby .start-btn:hover {
+  transform: rotate(-2deg) scale(1.05);
+}
+
+.LobbySettings {
+  background-color: #c6ffce;
+  border: 3px solid #052d00;
+  border-radius: 5px;
+  color: black;
+  padding: 5px;
+}
+.LobbySettings .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.356);
+}
+.LobbySettings table.settings {
+  background-color: rgba(0, 0, 0, 0.151);
+  border-spacing: 5px;
+}
+
+.Setting {
+  background-color: rgba(0, 0, 0, 0.356);
+  margin: 15px;
+  padding: 5px;
+  border: 1px solid black;
+}
+.Setting td {
+  padding: 5px;
+  border: 1px solid red;
 }
 
 /*# sourceMappingURL=App.css.map */

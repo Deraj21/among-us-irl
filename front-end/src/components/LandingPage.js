@@ -37,7 +37,7 @@ class LandingPage extends Component {
     }
 
     return (
-      <div className="LandingPage" style={landingPageStyle}>
+      <div className="LandingPage page" style={landingPageStyle}>
         <img className="innerImage" alt="among-us-irl" src={amongUsCouch} />
 
         <Switch>
