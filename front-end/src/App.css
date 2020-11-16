@@ -110,7 +110,7 @@ button:focus {
   border-radius: 12px;
 }
 .lobby-btn p {
-  font-family: Caveat;
+  font-family: Caveat, cursive;
   font-size: 45px;
   line-height: 40px;
   letter-spacing: 1px;
@@ -224,33 +224,93 @@ button:focus {
 }
 
 .LobbySettings {
-  background-color: #c6ffce;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(198, 255, 206, 0.75);
   border: 3px solid #052d00;
   border-radius: 5px;
   color: black;
-  padding: 5px;
+  padding: 10px;
+  margin: 15px;
+}
+.LobbySettings table {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.295);
+  border-collapse: separate;
+  border-spacing: 0px 5px;
+  padding: 0px 5px;
+  border-radius: 5px;
 }
 .LobbySettings .title {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5px;
-  background-color: rgba(0, 0, 0, 0.356);
-}
-.LobbySettings table.settings {
-  background-color: rgba(0, 0, 0, 0.151);
-  border-spacing: 5px;
+  background-color: rgba(0, 0, 0, 0.295);
+  font-family: Caveat, cursive;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
 .Setting {
-  background-color: rgba(0, 0, 0, 0.356);
-  margin: 15px;
-  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.27);
   border: 1px solid black;
 }
 .Setting td {
   padding: 5px;
-  border: 1px solid red;
+}
+.Setting td:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.Setting td:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.HostTasks {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 15px;
+  background-color: rgba(255, 255, 255, 0.27);
+}
+.HostTasks table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0px 5px;
+}
+.HostTasks table thead {
+  font-size: 20px;
+  font-weight: bold;
+}
+.HostTasks table thead td {
+  border-bottom: 2px solid white;
+}
+.HostTasks table tbody tr {
+  background-color: rgba(0, 0, 0, 0.295);
+  border: 1px solid white;
+}
+.HostTasks table tbody td {
+  padding: 5px 5px;
+}
+.HostTasks .title {
+  display: flex;
+  justify-content: space-between;
+}
+.HostTasks #manage-tasks-title {
+  font-family: Caveat, cursive;
+  color: black;
+}
+.HostTasks .new-task {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+.HostTasks .new-task p {
+  background-color: rgba(0, 0, 0, 0.295);
+  padding: 5px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=App.css.map */

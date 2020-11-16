@@ -13,16 +13,10 @@ class LandingPage extends Component {
     super()
 
     this.state = {
-      nickname: '',
       code: ''
     }
-
-    this.updateNickname = this.updateNickname.bind(this)
+    
     this.updateCode = this.updateCode.bind(this)
-  }
-
-  updateNickname(e) {
-    this.setState({ ...this.state, nickname: e.target.value })
   }
 
   updateCode(e) {

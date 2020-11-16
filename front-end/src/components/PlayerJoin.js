@@ -7,7 +7,6 @@ import cancel from '../assets/back.png'
 function PlayerJoin(props) {
 
   let {
-    nickname, updateNickname,
     code, updateCode
   } = props
 
@@ -16,8 +15,6 @@ function PlayerJoin(props) {
       <Link to="/landing">
         <img id="back" src={cancel} alt="back" />
       </Link>
-
-      <input type="text" className="lobby-input" placeholder="nickname" value={nickname} onChange={(e) => updateNickname(e)} />
 
       <div className="enter-code-box">
         <input type="text" className="lobby-input code-input" placeholder="code" value={code} onChange={(e) => updateCode(e)}/>

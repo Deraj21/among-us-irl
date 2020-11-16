@@ -1,31 +1,44 @@
 .LobbySettings
-  background-color: $pale-green
+  display: flex
+  flex-direction: column
+
+  background-color: rgba($pale-green, 0.75)
   border: 3px solid $dark-green
   border-radius: 5px
   color: black
-  padding: 5px
+  padding: 10px
+  margin: 15px
+
+  table
+    width: 100%
+    background-color: $transparent-black
+    border-collapse: separate
+    border-spacing: 0px 5px
+    padding: 0px 5px
+    border-radius: 5px
 
   .title
     display: flex
     justify-content: space-between
     align-items: center
     padding: 5px
-    background-color: rgba(0, 0, 0, 0.356)
-
-  table.settings
-    background-color: rgba(0, 0, 0, 0.151)
-    border-spacing: 5px
+    background-color: $transparent-black
+    font-family: $hand
+    margin-bottom: 10px
+    border-radius: 5px
 
 .Setting
-  background-color: rgba(0, 0, 0, 0.356)
-  margin: 15px
-  padding: 5px
+  background-color: $transparent-white
   border: 1px solid black
+  
 
   td
     padding: 5px
-    border: 1px solid red
 
-
-
-
+    &:first-child
+      border-top-left-radius: 5px
+      border-bottom-left-radius: 5px
+    &:last-child
+      border-top-right-radius: 5px
+      border-bottom-right-radius: 5px
+      

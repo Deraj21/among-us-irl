@@ -5,7 +5,7 @@ Web app that handles an in-person game of "Among Us"
 
 [link for image assets](https://www.spriters-resource.com/pc_computer/amongus/sheet/139872/)
 
-Adobe XD design is stored via Adobe creative cloud tied to Deraj21@gmail.com
+Adobe XD design is stored via Adobe creative cloud tied to personal email
 
 ---
 ## Front-end features needed
@@ -51,8 +51,20 @@ Adobe XD design is stored via Adobe creative cloud tied to Deraj21@gmail.com
   | med | medium |
   | lng | long   |
 
+### Settings Table
+- 
+  | field           | data type &info  |
+  | --------------- | --------------- |
+  | id              | string not null |
+  | numImposters    | integer         |
+  | numShortTasks   | integer         |
+  | numLongTasks    | integer         |
+  | killCooldownSec | integer         |
+
+
 ---
 ## Todo List
+### Planning
 - [x] get requirements into jira
   - [x] work out MVP and subsequent sprints
 - [x] plan out basic data model (to come back to later)
@@ -62,19 +74,29 @@ Adobe XD design is stored via Adobe creative cloud tied to Deraj21@gmail.com
   - [x] player pages
 - [x] Based on the design, decide what React features to use (redux, hooks, router etc...)
 - [x] research how to have apps talk to each other (host to players, players to host)
+### Front-end
 - [x] create-react-app for front end
   - [x] get file structure up
 - [x] create landing page (choose host or player)
-- [ ] create host pages
-  - [ ] main page (before game starts)
-  - [ ] create settings page
-  - [ ] task management page
+- [ ] create host pages (basically shells with dummy-data at this point)
+  - [x] main page (before game starts)
+  - [x] create settings page
+  - [x] task management page
   - [ ] in-game page
 - [ ] create player pages
   - [ ] lobby page (before game starts)
   - [ ] in-game page (view & complete tasks)
+- [ ] implement redux, and hook up...
+  - [ ] HOST
+    - [ ] game code (from server)
+    - [ ] settings
+    - [ ] host tasks
+    - [ ] player tasks
+### Back-end
 - [ ] create database
   - [ ] tasks table
+  - [ ] tasktypes table
+  - [ ] settings table
 - [ ] create back end server
   - [ ] CRUD for tasks
   - [ ] request auth token for Ably

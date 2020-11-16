@@ -31,9 +31,9 @@ class LobbySettings extends Component{
     const settings = data.map((s, i) => <Setting key={i} id={i} name={s.name} value={s.value} />)
 
     return (
-      <div className="LobbySettings" >
+      <div className="LobbySettings">
         <div className="title">
-          <p>Game Settings</p>
+          <h2>Game Settings</h2>
           <Link to="/lobby/host">
             <img id="back" src={cancel} alt="cancel"/>
           </Link>
@@ -44,6 +44,7 @@ class LobbySettings extends Component{
             { settings }
           </tbody>
         </table>
+
       </div>
     )
   }

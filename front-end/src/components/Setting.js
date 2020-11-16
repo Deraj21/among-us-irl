@@ -9,7 +9,6 @@ class Setting extends Component{
 
     return (
       <tr className="Setting">
-        <td>{id}</td>
         <td>{name}</td>
 
         <td>-</td>
